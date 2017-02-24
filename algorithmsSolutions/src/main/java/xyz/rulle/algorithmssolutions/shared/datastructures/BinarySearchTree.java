@@ -116,7 +116,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> {
         BinarySearchTree res;
         boolean balanced = isBalanced();
 //        System.out.println("this is balanced, it's " + balanced);
-        if (isBalanced()) res = this;
+        if (balanced) res = this;
         else{
             res = makeNew(keys(), this);
         }
@@ -147,7 +147,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> {
         
         System.out.println("depth left tree: " + leftCounter);
         System.out.println("depth right tree: " + rightCounter);
-        if (Math.abs(leftCounter - rightCounter)>= 3) return false;
+        if (Math.abs(leftCounter - rightCounter)>= 1) return false;
         else return true;
     }
     
