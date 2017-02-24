@@ -5,13 +5,13 @@
  */
 package xyz.rulle.algorithmssolutions.shared.datastructures;
 
-import com.sun.javafx.font.t2k.T2KFactory;
+import java.util.Iterator;
 
 /**
  *
  * @author Michael
  */
-public class FlexibleArray<T> {
+public class FlexibleArray<T>{
     private T[] array1;
     private T[] array2;
     private int length;
@@ -49,6 +49,13 @@ public class FlexibleArray<T> {
     
     public int size(){
         return length;
+    }
+    
+    public int indexOf(T element){
+        for (int i = 0; i < length; i++) {
+            if (element.equals(get(i))) return i;
+        }
+        return -1;
     }
     
     private void makeNew(){
