@@ -17,7 +17,7 @@ public class ArraySymbolTable implements SymbolTable<String, Integer>{
     int size;
     
     public ArraySymbolTable(){
-        words  = new FlexibleArray(Word.class);
+        words  = new FlexibleArray();
     }
     
     @Override

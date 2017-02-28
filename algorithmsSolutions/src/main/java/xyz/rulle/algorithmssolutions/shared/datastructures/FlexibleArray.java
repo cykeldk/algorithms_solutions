@@ -17,11 +17,13 @@ public class FlexibleArray<T>{
     private int length;
     private int split;
     
-    public FlexibleArray(T type){
+    public FlexibleArray(){
         array1 = (T[]) new Object[1];
         array2 = (T[]) new Object[2];
         length = 0;
     }
+    
+    
     
     public void add(T element){
         if (length < array1.length){
