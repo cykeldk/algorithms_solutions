@@ -7,9 +7,12 @@ package xyz.rulle.algorithmssolutions.ex2_searching;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import xyz.rulle.algorithmssolutions.shared.datastructures.ArraySymbolTable;
 import xyz.rulle.algorithmssolutions.shared.utilities.FileUtility;
+import xyz.rulle.algorithmssolutions.shared.utilities.Stopwatch;
 
 /**
  *
@@ -27,12 +30,22 @@ public class TestArraySymbolTable {
         
         ArraySymbolTable lst = new ArraySymbolTable();
         
-        for (String string : subShake){
+        Stopwatch sw = new Stopwatch();
+        
+        sw.start();
+        for (String string : allShake){
             lst.put(string, 1);
         }
+        sw.stop();
+        System.out.println("putting took " + sw.timeElapsed() + " milliseconds");
         
+        //List<String> keys = lst.keys();
+        
+        sw.start();
         for (String string : lst.keys()){
-            System.out.println(string + " : " + lst.get(string));
+            lst.get(string);
         }
+        sw.stop();
+        System.out.println("getting took " + sw.timeElapsed() + " milliseconds");
     }
 }
