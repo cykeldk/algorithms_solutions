@@ -8,3 +8,5 @@ the actual datastructures are all located in this folder:
 
 https://github.com/cykeldk/algorithms_solutions/tree/master/algorithmsSolutions/src/main/java/xyz/rulle/algorithmssolutions/shared/datastructures
 
+#The group
+Rasmus L, Jonathan S, Michael R.
